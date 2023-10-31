@@ -1,0 +1,45 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX sio: <http://semanticscience.org/resource/SIO_>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
+PREFIX Ref: <http://shex.io/extensions/Ref/#>
+
+<#Distribution> {
+  a [dcat:Resource];
+  a [dcat:Distribution];
+  rdfs:label xsd:string;
+  dcterms:accessRights @<#AccessRights>;
+  dcterms:language [<https://id.loc.gov/vocabulary/iso639-1/>~];
+  dcterms:license [<http://rdflicense.appspot.com/rdflicense/>~ ];
+  dcterms:publisher { a [foaf:Agent]; foaf:name xsd:string };
+  dcterms:title xsd:string;
+  sio:000628 @<#Metrics>+;
+  fdp-o:metadataIdentifier @<#Identifier>;
+  fdp-o:metadataIssued xsd:dateTime;
+  fdp-o:metadataModified xsd:dateTime;
+  dcterms:isPartOf IRI %Ref:{ <dataset-cds> %};
+  dcat:accessURL IRI;
+  dcat:downloadURL IRI; # probably same as above URL + ?query=...
+  dcat:mediaType ["application/sparql-results+json" "application/sparql-results+xml"];
+  dcat:version ["1"];
+  dcterms:conformsTo IRI AND { rdfs:label xsd:string} %Ref:{ <dataset-profile> %}
+}
+
+<#AccessRights> {
+  a [dcterms:RightsStatement];
+  dcterms:description xsd:string;
+}
+
+<#Identifier> {
+  a [<http://purl.org/spar/datacite/Identifier>];
+  dcterms:identifier xsd:string;
+}
+
+<#Metrics> {
+  sio:000628 [<https://www.ietf.org/rfc/rfc3986.txt> <https://www.wikidata.org/wiki/Q8777>]; # always 3986
+  sio:000332 [<https://www.ietf.org/rfc/rfc3986.txt> <https://www.wikidata.org/wiki/Q8777>]; # for both properies
+}

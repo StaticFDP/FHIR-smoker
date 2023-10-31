@@ -1,0 +1,52 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX sio: <http://semanticscience.org/resource/SIO_>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
+
+<>
+  a dcat:Resource, dcat:Catalog;
+  rdfs:label "COVID-19";
+  dcterms:accessRights <#accessRights>;
+  dcterms:language <https://id.loc.gov/vocabulary/iso639-1/en.html>;
+  dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
+  dcterms:publisher [ a foaf:Agent; foaf:name "TNO" ];
+  dcterms:title "COVID-19";
+  sio:000628 <#metrics-1>, <#metrics-2>;
+  fdp-o:metadataIdentifier <#identifier>;
+  fdp-o:metadataIssued "2021-06-09T07:42:36.25585516Z"^^xsd:dateTime;
+  fdp-o:metadataModified "2021-06-09T10:57:45.028725791Z"^^xsd:dateTime;
+  dcterms:isPartOf <../FairDataPoint.ttl>;
+  dcterms:issued "2021-06-09T07:42:36.25585516Z"^^xsd:dateTime;
+  dcterms:modified "2021-06-09T09:21:54.232652251Z"^^xsd:dateTime;
+  dcat:dataset <dataset-boston/dataset>;
+  dcat:version "1";
+  dcat:themeTaxonomy <https://www.wikidata.org/wiki/Q7662746>, <https://www.wikidata.org/wiki/Q662860>;
+  dcterms:conformsTo <../profiles/catalog-cds> .
+
+<#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "This resource has no access restriction" .
+
+<#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "http://staticfdp.github.io/FHIR-smoker/smokers/catalog" .
+
+<dataset-boston/dataset> a ldp:DirectContainer, ldp:DirectContainer;
+  dcterms:title "Datasets", "Datasets";
+  ldp:contains <dataset-boston/dataset>;
+  ldp:hasMemberRelation dcat:dataset, dcat:dataset;
+  ldp:membershipResource <> .
+
+<#metrics-1>
+  sio:000628 <https://www.ietf.org/rfc/rfc3986.txt>;
+  sio:000332 <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<#metrics-2>
+  sio:000628 <https://www.wikidata.org/wiki/Q8777>;
+  sio:000332 <https://www.wikidata.org/wiki/Q8777> .
+
+<../profiles/catalog-cds> rdfs:label "Clinical Decision Support FDP Catalog Profile" .

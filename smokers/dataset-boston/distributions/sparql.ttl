@@ -1,0 +1,45 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX sio: <http://semanticscience.org/resource/SIO_>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
+
+<>
+  a dcat:Resource, dcat:Distribution;
+  rdfs:label "SPARQL distribution";
+  dcterms:accessRights <#accessRights>;
+  dcterms:language <https://id.loc.gov/vocabulary/iso639-1/en.html>;
+  dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
+  dcterms:publisher [ a foaf:Agent; foaf:name "TNO" ];
+  dcterms:title "SPARQL distribution";
+  sio:000628 <#metrics-1>, <#metrics-2>;
+  fdp-o:metadataIdentifier <#identifier>;
+  fdp-o:metadataIssued "2021-06-09T07:49:59.940908552Z"^^xsd:dateTime;
+  fdp-o:metadataModified "2021-06-09T10:57:44.588530792Z"^^xsd:dateTime;
+  dcterms:isPartOf <../dataset>;
+  dcat:accessURL <https://example.org/Hey/Make/A/Query/Endpoint>;
+  dcat:downloadURL <https://example.org/Hey/Make/A/Query/Endpoint?query=select%252520%25252A%252520where%252520%25257B%25253Fs%252520%25253Fp%252520%25253Fo%252520.%25257D%252520limit%252520100>;
+  dcat:mediaType "application/sparql-results+json";
+  dcat:version "1";
+  dcterms:conformsTo <../../../profiles/distribution-cds-sparql> .
+
+<#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "This resource has no access restriction" .
+
+<#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "http://staticfdp.github.io/FHIR-smoker/smokers/dataset-boston/distributions/sparql" .
+
+<#metrics-1>
+  sio:000628 <https://www.ietf.org/rfc/rfc3986.txt>;
+  sio:000332 <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<#metrics-2>
+  sio:000628 <https://www.wikidata.org/wiki/Q8777>;
+  sio:000332 <https://www.wikidata.org/wiki/Q8777> .
+
+<../../../profiles/distribution-cds-sparql> rdfs:label "Clinical Decision Support FDP SPARQL Distribution Profile" .

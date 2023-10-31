@@ -1,0 +1,29 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+
+<>
+  a prof:Profile;
+  rdfs:label "FAIR Data Point Profile";
+  prof:isProfileOf <core>;
+  prof:hasResource
+    [
+      a prof:ResourceDescriptor;
+      rdfs:label "Data Service";
+      # Don't know what this should look like
+    ], [
+      a prof:ResourceDescriptor;
+      rdfs:label "Metadata Service";
+      # Don't know what this should look like
+    ], [
+      a prof:ResourceDescriptor;
+      rdfs:label "FAIR Data Point";
+      dcterms:format <https://w3id.org/mediatype/text/shex>;
+      dcterms:conformsTo <http://shex.io/spec/>;
+      prof:hasRole prof:role\/Validation;
+      prof:hasArtifact <../schemas/datapoint.shex>
+    ] .
