@@ -21,7 +21,7 @@ PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
   fdp-o:metadataModified "2021-06-09T10:57:44.95533411Z"^^xsd:dateTime;
   dcterms:isPartOf <../catalog>;
   dcat:distribution <distributions/sparql>;
-  dcat:keyword "COVID", "Synthetic data";
+  dcat:keyword "Smoking history", "Synthetic data";
   dcat:theme <https://www.wikidata.org/wiki/Q7662746>, <https://www.wikidata.org/wiki/Q662860>;
   dcat:version "1";
   dcterms:conformsTo <../../profiles/dataset-cds> .

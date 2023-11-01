@@ -9,13 +9,13 @@ PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
 PREFIX re3: <http://www.re3data.org/schema/3-0#>
 
 <> a dcat:DataService, dcat:Resource, fdp-o:FAIRDataPoint, fdp-o:MetadataService;
-  rdfs:label "TNO DIAMONDS FAIR Data Point";
+  rdfs:label "CDS smoking history FAIR Data Point";
   dcterms:accessRights <#accessRights>;
   dcterms:description "Claude Nanjo and Eric Prud'hommeaux for AMIA tutorial 2023";
   dcterms:language <https://id.loc.gov/vocabulary/iso639-1/en>;
   dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
   dcterms:publisher <#publisher>;
-  dcterms:title "TNO DIAMONDS FAIR Data Point";
+  dcterms:title "CDS smoking history FAIR Data Point";
   sio:000628 <#metrics-1>, <#metrics-2>;
   re3:institution <https://tno.nl>;
   re3:lastUpdate "2021-06-09T00:00:00Z"^^xsd:dateTime;

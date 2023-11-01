@@ -9,12 +9,12 @@ PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
 
 <>
   a dcat:Resource, dcat:Catalog;
-  rdfs:label "COVID-19";
+  rdfs:label "CDS smoking history DCAT Catalog";
   dcterms:accessRights <#accessRights>;
   dcterms:language <https://id.loc.gov/vocabulary/iso639-1/en.html>;
   dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
   dcterms:publisher [ a foaf:Agent; foaf:name "TNO" ];
-  dcterms:title "COVID-19";
+  dcterms:title "CDS smoking history DCAT Catalog";
   sio:000628 <#metrics-1>, <#metrics-2>;
   fdp-o:metadataIdentifier <#identifier>;
   fdp-o:metadataIssued "2021-06-09T07:42:36.25585516Z"^^xsd:dateTime;
