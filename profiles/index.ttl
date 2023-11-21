@@ -1,0 +1,31 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+
+<index>
+  a prof:Profile;
+  rdfs:label "FAIR Data Point Profile";
+  prof:isProfileOf <https://patient-registries.fdps.ejprd.semlab-leiden.nl/profile/core>;
+  prof:hasResource [ a prof:#ResourceDescriptor;
+      rdfs:label "Data Service";
+      dcterms:format <https://w3id.org/mediatype/text/turtle>;
+      dcterms:conformsTo <https://www.w3.org/TR/shacl/>;
+      prof:hasRole prof:role\/Validation;
+      prof:hasArtifact <https://patient-registries.fdps.ejprd.semlab-leiden.nl/metadata-schemas/89d94c1b-f6ff-4545-ba9b-120b2d1921d0>
+    ], [ a prof:#ResourceDescriptor;
+      rdfs:label "Metadata Service";
+      dcterms:format <https://w3id.org/mediatype/text/turtle>;
+      dcterms:conformsTo <https://www.w3.org/TR/shacl/>;
+      prof:hasRole prof:role\/Validation;
+      prof:hasArtifact <https://patient-registries.fdps.ejprd.semlab-leiden.nl/metadata-schemas/6f7a5a76-6185-4bd0-9fe9-62ecc90c9bad>
+    ], [ a prof:#ResourceDescriptor;
+      rdfs:label "FAIR Data Point";
+      dcterms:format <https://w3id.org/mediatype/text/turtle>;
+      dcterms:conformsTo <https://www.w3.org/TR/shacl/>;
+      prof:hasRole prof:role\/Validation;
+      prof:hasArtifact <https://patient-registries.fdps.ejprd.semlab-leiden.nl/metadata-schemas/a92958ab-a414-47e6-8e17-68ba96ba3a2b>
+    ] .

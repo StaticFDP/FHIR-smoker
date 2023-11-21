@@ -12,40 +12,40 @@ PREFIX re3: <http://www.re3data.org/schema/3-0#>
   rdfs:label "CDS smoking history FAIR Data Point";
   dcterms:accessRights <#accessRights>;
   dcterms:description "Claude Nanjo and Eric Prud'hommeaux for AMIA tutorial 2023";
-  dcterms:language <https://id.loc.gov/vocabulary/iso639-1/en>;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/en>;
   dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
-  dcterms:publisher <#publisher>;
+  dcterms:publisher <https://orcid.org/0000-0003-1775-9921>;
   dcterms:title "CDS smoking history FAIR Data Point";
   sio:000628 <#metrics-1>, <#metrics-2>;
-  re3:institution <https://tno.nl>;
-  re3:lastUpdate "2021-06-09T00:00:00Z"^^xsd:dateTime;
+
   re3:repositoryIdentifier <#identifier>;
-  re3:startDate "2021-06-01T00:00:00Z"^^xsd:dateTime;
+
   fdp-o:metadataCatalog <smokers/catalog>;
   fdp-o:metadataIdentifier <#identifier>;
-  fdp-o:metadataIssued "2021-06-08T14:44:35.620975136Z"^^xsd:dateTime;
-  fdp-o:metadataModified "2022-05-24T09:03:24.628909132Z"^^xsd:dateTime;
-  dcterms:conformsTo <profiles/datapoint>;
+  fdp-o:metadataIssued "2022-12-14T10:32:29.488191886Z"^^xsd:dateTime;
+  fdp-o:metadataModified "2023-08-14T17:44:04.46994896Z"^^xsd:dateTime;
+  dcterms:conformsTo <profiles/index>;
   dcat:endpointURL <>;
-  fdp-o:fdpSoftwareVersion "FDP:v1.13.1~a55fcf5", "FDP:v1.17.1~9604e79";
-  dcat:version "1.0" .
+  fdp-o:fdpSoftwareVersion "GitHub Enterprise Server 3.11.0-rc.1";
+  dcterms:hasVersion "1.0".
 
 <#accessRights> a dcterms:RightsStatement;
   dcterms:description "This resource has no access restriction" .
 
-<#publisher> a foaf:Agent; foaf:name "TNO" .
+<#publisher> a foaf:Agent;
+  foaf:name "Default Publisher" .
 
 <#identifier> a <http://purl.org/spar/datacite/Identifier>;
-  dcterms:identifier "http://staticfdp.github.io/FHIR-smoker/FairDataPoint" .
+  dcterms:identifier "http://staticfdp.github.io/FHIR-smoker/index" .
 
-<smokers/> a ldp:DirectContainer, ldp:DirectContainer;
-  dcterms:title "Catalogs", "Catalogs";
-  ldp:contains <smokers/catalog>;
-  ldp:hasMemberRelation fdp-o:metadataCatalog, re3:dataCatalog, fdp-o:metadataCatalog;
-  ldp:membershipResource <>.
+<catalog/> a ldp:DirectContainer;
+  dcterms:title "Catalogs";
+  ldp:hasMemberRelation fdp-o:metadataCatalog;
+  ldp:membershipResource <>, <>;
+  ldp:contains <smokers/catalog> .
 
-<profiles/FairDataPoint>
-  rdfs:label "FAIR Data Point Profile", "FAIR Data Point Profile" .
+<profiles/index>
+  rdfs:label "FAIR Data Point Profile" .
 
 <#metrics-1>
   sio:000628 <https://www.ietf.org/rfc/rfc3986.txt>;
