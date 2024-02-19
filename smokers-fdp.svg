@@ -9,10 +9,40 @@
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2190" />
+     id="defs2190">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2633" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2636" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="namedview2188"
      pagecolor="#ffffff"
@@ -23,15 +53,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="cm"
      showgrid="false"
-     inkscape:zoom="0.62053495"
-     inkscape:cx="399.65517"
-     inkscape:cy="405.29546"
+     inkscape:zoom="1.6655046"
+     inkscape:cx="776.0411"
+     inkscape:cy="272.28985"
      inkscape:window-width="3840"
      inkscape:window-height="2136"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="main"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -42,7 +72,7 @@
           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
           x="0"
           y="5"
-          width="304"
+          width="310"
           height="379"
           rx="0"
           ry="0"
@@ -101,7 +131,7 @@
   </defs>
   <g id="main" inkscape:groupmode="layer" inkscape:label="main">
     <g id="EhrFdp" transform="translate(0.71319679,17.153533)">
-      <use href="#template" x="0" y="0" width="100%" height="100%" />
+      <use xlink:href="#template" x="0" y="0" width="100%" height="100%" />
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -118,9 +148,9 @@
         <tspan x="216"   y="62" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
       </text>
     </g>
-    <g id="smokers-catalog" transform="translate(400,50)">
-      <use href="#template" x="0" y="20" width="100%" height="100%" />
-      <use href="#parent" x="0" y="20" width="100%" height="100%" />
+    <g id="smokers-catalog" transform="translate(350,50)">
+      <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
+      <use xlink:href="#parent" x="0" y="20" width="100%" height="100%" />
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -137,5 +167,30 @@
         <tspan x="164"   y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
       </text>
     </g>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 222.30092,172.54584 C 343.96789,167.09344 316.7807,145.72929 208.11398,121.78231 176.43387,114.80093 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
+       id="membershipResource"
+       sodipodi:nodetypes="csscc" />
+    <path
+       style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 238.58264,191.06052 c 61.72442,0.31232 115.32889,-50.3709 -3.76923,-71.64034 -14.02358,-2.50443 -62.51436,-11.06259 -62.51436,-11.06259"
+       id="hasMemberRelation"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
+       id="contains"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773"
+       id="nested"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mstart)"
+       d="M 523.29843,123.32728 C 667.61912,103.29421 749.96412,30.153426 527.5914,29.75536 353.79861,29.444256 311.01154,31.197324 311.01154,31.197324 v 0"
+       id="isPartOf"
+       sodipodi:nodetypes="cscc" />
   </g>
 </svg>
