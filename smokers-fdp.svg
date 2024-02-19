@@ -99,6 +99,23 @@
         <tspan x="0"     y="86" xml:space="preserve" style="fill:#dd3300;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">#</tspan>
         <tspan x="18"    y="86" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">metadata...</tspan>
 
+      </text>
+    </g>
+    <g id="ldp">
+      <rect
+          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+          x="3"
+          y="130"
+          width="304"
+          height="70"
+          rx="0"
+          ry="0"
+          id="fdp-box" />
+      <text
+          font-size="13px"
+          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+          id="ldp-text"
+          transform="translate(5,24)">
         <tspan x="0"     y="118" xml:space="preserve" style="fill:#0000ff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;myContainer/&gt;</tspan>
         <tspan x="120"   y="118" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">a</tspan>
         <tspan x="136"   y="118" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">ldp:DirectContainer</tspan>
@@ -116,6 +133,23 @@
         <tspan x="118.5" y="172" xml:space="preserve" style="fill:#00ff00;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
         <tspan x="163"   y="172" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">.</tspan>
       </text>
+      <g id="ldp-arrows" transform="translate(0,-16)">
+        <path
+            style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+            d="M 222.30092,172.54584 C 343.96789,167.09344 316.7807,145.72929 208.11398,121.78231 176.43387,114.80093 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
+            id="membershipResource"
+            sodipodi:nodetypes="csscc" />
+        <path
+            style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+            d="m 238.58264,191.06052 c 61.72442,0.31232 115.32889,-50.3709 -3.76923,-71.64034 -14.02358,-2.50443 -62.51436,-11.06259 -62.51436,-11.06259"
+            id="hasMemberRelation"
+            sodipodi:nodetypes="csc" />
+        <path
+            style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+            d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
+            id="contains"
+            sodipodi:nodetypes="cssc" />
+      </g>
     </g>
     <g id="parent">
       <text
@@ -132,6 +166,7 @@
   <g id="main" inkscape:groupmode="layer" inkscape:label="main">
     <g id="EhrFdp" transform="translate(0.71319679,17.153533)">
       <use xlink:href="#template" x="0" y="0" width="100%" height="100%" />
+      <use xlink:href="#ldp" x="0" y="0" width="100%" height="100%" />
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -150,6 +185,7 @@
     </g>
     <g id="smokers-catalog" transform="translate(350,50)">
       <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
+      <use xlink:href="#ldp" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#parent" x="0" y="20" width="100%" height="100%" />
       <text
           font-size="22.5774px"
@@ -167,21 +203,6 @@
         <tspan x="164"   y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
       </text>
     </g>
-    <path
-       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 222.30092,172.54584 C 343.96789,167.09344 316.7807,145.72929 208.11398,121.78231 176.43387,114.80093 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
-       id="membershipResource"
-       sodipodi:nodetypes="csscc" />
-    <path
-       style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 238.58264,191.06052 c 61.72442,0.31232 115.32889,-50.3709 -3.76923,-71.64034 -14.02358,-2.50443 -62.51436,-11.06259 -62.51436,-11.06259"
-       id="hasMemberRelation"
-       sodipodi:nodetypes="csc" />
-    <path
-       style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
-       id="contains"
-       sodipodi:nodetypes="cssc" />
     <path
        style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773"
