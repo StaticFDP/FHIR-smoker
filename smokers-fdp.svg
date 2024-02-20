@@ -13,9 +13,123 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <style>
+    text {
+      font-size: 13px;
+    }
+    tspan {
+      font-style:normal;
+      font-variant:normal;
+      font-weight:normal;
+      font-stretch:normal;
+      font-family:'DejaVu Sans Mono';
+      -inkscape-font-specification:'DejaVu Sans Mono'
+    }
+    path {
+      /* fill:none; -- strikes arrow heads */
+      stroke-width:3;
+      stroke-linecap:butt;
+      stroke-linejoin:miter;
+      stroke-miterlimit:4;
+      stroke-dasharray:none;
+      stroke-opacity:1;
+    }
+
+    /* Turtle */
+    .turtle { fill: #770000; }
+    .punct { fill: #777777; }
+    .comment marker { fill:#dd3300; }
+    .comment text   { fill:#000000; }
+
+    /* roles */
+    .meta { fill: #777700; }
+    .node { fill: #0000ff; }
+    .filename { font-size: large }
+
+    /* vocabularies */
+    .dcat { fill: #330000; }
+    .fdp  { fill: #004444; }
+    .ldp  { fill: #556677 }
+    .dc  { fill: #440044 }
+
+    /* parent */
+    #main .link { stroke:#00ff00 } /* default color for link arcs */
+
+    #ldp-arrows .node { stroke:#0000ff }
+    #ldp-arrows .meta { stroke:#770000 }
+    #ldp-arrows .link { stroke:#00ff00 }
+
+    #parent text { font-size:13px; }
+    #parent .link { fill: #777700; }
+    #parent path { stroke: #777700; }
+
+    .box { fill-opacity:1; stroke-width:2; stroke-opacity:1; fill:#ffffff }
+    .box.frame { fill:#ffffff; stroke:#000000 }
+    .box.dcat  { fill:#ffeedd; stroke:#ffddcc }
+    .box.ldp   { fill:#ddeeff; 1;stroke:#ccddee }
+
   </style>
-  <defs
-     id="defs2190">
+  <defs id="sprites" style="display:none" inkscape:groupmode="layer" inkscape:label="sprites" >
+    <g id="template">
+      <rect id="template-box" class="box frame" x="0" y="5" width="310" height="200" rx="0" ry="0" />
+      <rect id="dcat-box" class="box dcat" x="3" y="45" width="304" height="44" rx="0" ry="0" />
+      <text id="template-text" transform="translate(5,24)">
+        <tspan x="0"     y="0"  xml:space="preserve" class="node">&lt;&gt;</tspan>
+        <tspan x="24"    y="0"  xml:space="preserve" class="turtle">a</tspan>
+
+        <tspan x="16"    y="48" xml:space="preserve" class="dcat predicate">dcat:theme</tspan>
+        <tspan x="104"   y="48" xml:space="preserve" class="meta">&lt;...&gt;</tspan>
+        <tspan x="142"   y="48" xml:space="preserve" class="punct">,</tspan>
+        <tspan x="154"   y="48" xml:space="preserve" class="meta">&lt;...&gt;</tspan>
+        <tspan x="198"   y="48" xml:space="preserve" class="punct">;</tspan>
+
+        <tspan x="0"     y="86" xml:space="preserve" class="comment marker">#</tspan>
+        <tspan x="18"    y="86" xml:space="preserve" class="comment text">metadata...</tspan>
+
+      </text>
+    </g>
+
+    <g id="ldp">
+      <rect id="fdp-box" class="box ldp" x="3" y="130" width="304" height="70" rx="0" ry="0" />
+      <text id="ldp-text" transform="translate(5,24)">
+        <tspan x="0"     y="118" xml:space="preserve" class="fdp node">&lt;myContainer/&gt;</tspan>
+        <tspan x="120"   y="118" xml:space="preserve" class="turtle">a</tspan>
+        <tspan x="136"   y="118" xml:space="preserve" class="fdp class">ldp:DirectContainer</tspan>
+        <tspan x="288"   y="118" xml:space="preserve" class="punct">;</tspan>
+
+        <tspan x="16"    y="136" xml:space="preserve" class="fdp predicate">ldp:membershipResource</tspan>
+        <tspan x="198.5" y="136" xml:space="preserve" class="meta">&lt;&gt;</tspan>
+        <tspan x="218"   y="136" xml:space="preserve" class="punct">;</tspan>
+
+        <tspan x="16"    y="154" xml:space="preserve" class="fdp predicate">ldp:hasMemberRelation</tspan>
+        <tspan x="190.5" y="154" xml:space="preserve" class="meta">&lt;...&gt;</tspan>
+        <tspan x="235"   y="154" xml:space="preserve" class="punct">;</tspan>
+
+        <tspan x="16"    y="172" xml:space="preserve" class="fdp predicate">ldp:contains</tspan>
+        <tspan x="118.5" y="172" xml:space="preserve" class="node">&lt;...&gt;</tspan>
+        <tspan x="163"   y="172" xml:space="preserve" class="punct">.</tspan>
+      </text>
+      <g id="ldp-arrows" transform="translate(0,-16)">
+        <path id="membershipResource" class="node" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csscc"
+              d="M 222.30092,172.54584 C 342.86337,172.36986 346.0454,126.80567 81.225784,115.4008 52.399298,114.23251 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718" />
+        <path id="hasMemberRelation" class="meta" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csc"
+              d="m 236.44819,190.73993 c 80.35294,-2.00308 104.48457,-53.81832 0.11505,-71.07872 -96.5507,-12.44036 -118.31146,-2.80057 -131.08996,-9.75754 -5.816724,-3.16679 -10.961337,-6.11145 -10.961337,-6.11145" />
+        <path id="contains" class="link" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="cssc"
+            d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
+            />
+      </g>
+    </g>
+
+    <g id="parent">
+      <text id="template-text" transform="translate(5,27)">
+        <tspan x="16"    y="30" xml:space="preserve" class="dcat predicate">dcat:isPartOf</tspan>
+        <tspan x="126"   y="30" xml:space="preserve" class="link">&lt;...&gt;</tspan>
+        <tspan x="168"   y="30" xml:space="preserve" class="punct">;</tspan>
+      </text>
+      <path id="isPartOf" transform="translate(-350,-70)" style="fill:none;marker-end:url(#Arrow1Mstart)" d="M 523,123 C 668,103 750,40 528,40 354,40 311.01154,40 316,40 v 0" sodipodi:nodetypes="cscc" />
+    </g>
+  </defs>
+
+  <defs id="markers"><!-- different from #sprites because display is (by default) on -->
     <marker
        style="overflow:visible"
        id="Arrow1Mstart"
@@ -30,6 +144,7 @@
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path2633" />
     </marker>
+
     <marker
        style="overflow:visible;"
        id="Arrow1Mend"
@@ -45,241 +160,68 @@
          id="path2636" />
     </marker>
   </defs>
-  <sodipodi:namedview
-     id="namedview2188"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="cm"
-     showgrid="false"
-     inkscape:zoom="1.6655046"
-     inkscape:cx="776.0411"
-     inkscape:cy="272.28985"
-     inkscape:window-width="3840"
-     inkscape:window-height="2136"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="main"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <defs id="sprites" style="display:none" inkscape:groupmode="layer" inkscape:label="sprites" >
-    <g id="template">
-      <rect
-          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
-          x="0"
-          y="5"
-          width="310"
-          height="200"
-          rx="0"
-          ry="0"
-          id="template-box" />
-      <rect
-          style="fill:#ffeedd;fill-opacity:1;stroke:#ffddcc;stroke-width:2;stroke-opacity:1"
-          x="3"
-          y="45"
-          width="304"
-          height="44"
-          rx="0"
-          ry="0"
-          id="dcat-box" />
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="template-text"
-          transform="translate(5,24)">
-        <tspan x="0"     y="0"  xml:space="preserve" style="fill:#0000ff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;&gt;</tspan>
-        <tspan x="24"    y="0"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">a</tspan>
 
-        <tspan x="16"    y="48" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:theme</tspan>
-        <tspan x="104"   y="48" xml:space="preserve" style="fill:#777700;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="142"   y="48" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">,</tspan>
-        <tspan x="154"   y="48" xml:space="preserve" style="fill:#777700;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="198"   y="48" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
-
-        <tspan x="0"     y="86" xml:space="preserve" style="fill:#dd3300;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">#</tspan>
-        <tspan x="18"    y="86" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">metadata...</tspan>
-
-      </text>
-    </g>
-    <g id="ldp">
-      <rect
-          style="fill:#ddeeff;fill-opacity:1;stroke:#ccddee;stroke-width:2;stroke-opacity:1"
-          x="3"
-          y="130"
-          width="304"
-          height="70"
-          rx="0"
-          ry="0"
-          id="fdp-box" />
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="ldp-text"
-          transform="translate(5,24)">
-        <tspan x="0"     y="118" xml:space="preserve" style="fill:#0000ff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;myContainer/&gt;</tspan>
-        <tspan x="120"   y="118" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">a</tspan>
-        <tspan x="136"   y="118" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">ldp:DirectContainer</tspan>
-        <tspan x="288"   y="118" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
-
-        <tspan x="16"    y="136" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">ldp:membershipResource</tspan>
-        <tspan x="198.5" y="136" xml:space="preserve" style="fill:#0000ff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;&gt;</tspan>
-        <tspan x="218"   y="136" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
-
-        <tspan x="16"    y="154" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">ldp:hasMemberRelation</tspan>
-        <tspan x="190.5" y="154" xml:space="preserve" style="fill:#777700;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="235"   y="154" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
-
-        <tspan x="16"    y="172" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">ldp:contains</tspan>
-        <tspan x="118.5" y="172" xml:space="preserve" style="fill:#00ff00;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="163"   y="172" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">.</tspan>
-      </text>
-      <g id="ldp-arrows" transform="translate(0,-16)">
-        <path
-            style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-            d="M 222.30092,172.54584 C 342.86337,172.36986 346.0454,126.80567 81.225784,115.4008 52.399298,114.23251 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
-            id="membershipResource"
-            sodipodi:nodetypes="csscc" />
-        <path
-            style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-            d="m 236.44819,190.73993 c 80.35294,-2.00308 104.48457,-53.81832 0.11505,-71.07872 -96.5507,-12.44036 -118.31146,-2.80057 -131.08996,-9.75754 -5.816724,-3.16679 -10.961337,-6.11145 -10.961337,-6.11145"
-            id="hasMemberRelation"
-            sodipodi:nodetypes="csc" />
-        <path
-            style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-            d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
-            id="contains"
-            sodipodi:nodetypes="cssc" />
-      </g>
-    </g>
-    <g id="parent">
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="template-text"
-          transform="translate(5,27)">
-        <tspan x="16"    y="30" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:isPartOf</tspan>
-        <tspan x="126"   y="30" xml:space="preserve" style="fill:#777700;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="168"   y="30" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
-      </text>
-      <path
-          style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mstart)"
-          d="M 523.29843,123.32728 C 667.61912,103.29421 749.96412,30.153426 527.5914,29.75536 353.79861,29.444256 311.01154,31.197324 316,31.197324 v 0"
-          id="isPartOf"
-          transform="translate(-350,-70)"
-          sodipodi:nodetypes="cscc" />
-    </g>
-  </defs>
   <g id="main" inkscape:groupmode="layer" inkscape:label="main">
     <g id="EhrFdp" transform="translate(0.71319679,17.153533)">
       <use xlink:href="#template" x="0" y="0" width="100%" height="100%" />
       <use xlink:href="#ldp" x="0" y="0" width="100%" height="100%" />
-      <text
-          font-size="22.5774px"
-          style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-title">
-      <tspan x="0" y="0" id="tspan2162">EhrFdp.ttl</tspan></text>
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-text"
-          transform="translate(5,24)">
-        <tspan x="40"    y="0"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:DataService</tspan>
-        <tspan x="164"   y="0"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">,</tspan>
+      <text id="EhrFdp-title" class="filename"><tspan x="0" y="0">EhrFdp.ttl</tspan></text>
+      <text id="EhrFdp-text" transform="translate(5,24)">
+        <tspan x="40"    y="0"  xml:space="preserve" class="dcat class">dcat:DataService</tspan>
+        <tspan x="164"   y="0"  xml:space="preserve" class="punct">,</tspan>
 
-        <tspan x="40"    y="16" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">fdp:FairDataPoint</tspan>
-        <tspan x="178.5" y="16" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+        <tspan x="40"    y="16" xml:space="preserve" class="fdp">fdp:FairDataPoint</tspan>
+        <tspan x="178.5" y="16" xml:space="preserve" class="punct">;</tspan>
 
-        <tspan x="15"    y="62" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">fdp:metadataCatalog</tspan>
-        <tspan x="172.5" y="62" xml:space="preserve" style="fill:#00ff00;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="216"   y="62" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+        <tspan x="15"    y="62" xml:space="preserve" class="fdp">fdp:metadataCatalog</tspan>
+        <tspan x="172.5" y="62" xml:space="preserve" class="node">&lt;...&gt;</tspan>
+        <tspan x="216"   y="62" xml:space="preserve" class="punct">;</tspan>
       </text>
-      <path
-          style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773"
-          id="EhrFdp-nested"
-          transform="translate(0,-16)"
-          sodipodi:nodetypes="csc" />
+      <path id="EhrFdp-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,-16)"
+            d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
     </g>
 
     <g id="smokers-catalog" transform="translate(350,50)">
       <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#ldp" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#parent" x="0" y="20" width="100%" height="100%" />
-      <text
-          font-size="22.5774px"
-          style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-catalog-title">
-        <tspan x="0" y="16" id="tspan2162">smokers/catalog.ttl</tspan></text>
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-catalog-text"
-          transform="translate(5,24)">
-        <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Catalog</tspan>
-        <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+      <text id="smokers-catalog-title" class="filename"><tspan x="0" y="16" id="tspan2162">smokers/catalog.ttl</tspan></text>
+      <text id="smokers-catalog-text" transform="translate(5,24)">
+        <tspan x="40"    y="20"  xml:space="preserve" class="dcat class">dcat:Catalog</tspan>
+        <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
 
-        <tspan x="15"    y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:dataset</tspan>
-        <tspan x="120.5" y="82" xml:space="preserve" style="fill:#00ff00;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="164"   y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+        <tspan x="15"    y="82" xml:space="preserve" class="dcat predicate">dcat:dataset</tspan>
+        <tspan x="120.5" y="82" xml:space="preserve" class="node">&lt;...&gt;</tspan>
+        <tspan x="164"   y="82" xml:space="preserve" class="punct">;</tspan>
       </text>
-      <path
-          style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773"
-          id="smokers-catalog-nested"
-          transform="translate(0,4)"
-          sodipodi:nodetypes="csc" />
+      <path id="smokers-catalog-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,4)"
+            d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
     </g>
 
     <g id="smokers-dataset" transform="translate(700,100)">
       <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#ldp" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#parent" x="0" y="20" width="100%" height="100%" />
-      <text
-          font-size="22.5774px"
-          style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-dataset-title">
-        <tspan x="0" y="16">smokers/dataset.ttl</tspan></text>
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-dataset-text"
-          transform="translate(5,24)">
-        <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Dataset</tspan>
-        <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+      <text id="smokers-dataset-title" class="filename"><tspan x="0" y="16">smokers/dataset.ttl</tspan></text>
+      <text id="smokers-dataset-text" transform="translate(5,24)">
+        <tspan x="40"    y="20"  xml:space="preserve" class="dcat class">dcat:Dataset</tspan>
+        <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
 
-        <tspan x="15"    y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:distribution</tspan>
-        <tspan x="160.5" y="82" xml:space="preserve" style="fill:#00ff00;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">&lt;...&gt;</tspan>
-        <tspan x="204"   y="82" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+        <tspan x="15"    y="82" xml:space="preserve" class="dcat predicate">dcat:distribution</tspan>
+        <tspan x="160.5" y="82" xml:space="preserve" class="node">&lt;...&gt;</tspan>
+        <tspan x="204"   y="82" xml:space="preserve" class="punct">;</tspan>
       </text>
-      <path
-          style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773"
-          id="smokers-dataset-nested"
-          transform="translate(0,4)"
-          sodipodi:nodetypes="csc" />
+      <path id="smokers-dataset-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,4)"
+          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
     </g>
 
     <g id="smokers-distribution" transform="translate(1050,150)">
       <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
       <use xlink:href="#parent" x="0" y="20" width="100%" height="100%" />
-      <text
-          font-size="22.5774px"
-          style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-distribution-title">
-        <tspan x="0" y="16" id="tspan2162">boston/distribution/sparql.ttl</tspan></text>
-      <text
-          font-size="13px"
-          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="smokers-distribution-text"
-          transform="translate(5,24)">
-        <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Distribution</tspan>
-        <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
+      <text id="smokers-distribution-title" class="filename"><tspan x="0" y="16" id="tspan2162">boston/distribution/sparql.ttl</tspan></text>
+      <text id="smokers-distribution-text" transform="translate(5,24)" font-size="13px">
+        <tspan x="40"    y="20"  xml:space="preserve" class="dcat predicate">dcat:Distribution</tspan>
+        <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
       </text>
     </g>
   </g>
