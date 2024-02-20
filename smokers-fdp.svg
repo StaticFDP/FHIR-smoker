@@ -12,6 +12,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+  </style>
   <defs
      id="defs2190">
     <marker
@@ -140,12 +142,12 @@
       <g id="ldp-arrows" transform="translate(0,-16)">
         <path
             style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-            d="M 222.30092,172.54584 C 343.96789,167.09344 316.7807,145.72929 208.11398,121.78231 176.43387,114.80093 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
+            d="M 222.30092,172.54584 C 342.86337,172.36986 346.0454,126.80567 81.225784,115.4008 52.399298,114.23251 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718"
             id="membershipResource"
             sodipodi:nodetypes="csscc" />
         <path
             style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-            d="m 238.58264,191.06052 c 61.72442,0.31232 115.32889,-50.3709 -3.76923,-71.64034 -14.02358,-2.50443 -62.51436,-11.06259 -62.51436,-11.06259"
+            d="m 236.44819,190.73993 c 80.35294,-2.00308 104.48457,-53.81832 0.11505,-71.07872 -96.5507,-12.44036 -118.31146,-2.80057 -131.08996,-9.75754 -5.816724,-3.16679 -10.961337,-6.11145 -10.961337,-6.11145"
             id="hasMemberRelation"
             sodipodi:nodetypes="csc" />
         <path
@@ -167,7 +169,7 @@
       </text>
       <path
           style="fill:none;stroke:#777700;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mstart)"
-          d="M 523.29843,123.32728 C 667.61912,103.29421 749.96412,30.153426 527.5914,29.75536 353.79861,29.444256 311.01154,31.197324 311.01154,31.197324 v 0"
+          d="M 523.29843,123.32728 C 667.61912,103.29421 749.96412,30.153426 527.5914,29.75536 353.79861,29.444256 311.01154,31.197324 316,31.197324 v 0"
           id="isPartOf"
           transform="translate(-350,-70)"
           sodipodi:nodetypes="cscc" />
@@ -212,12 +214,12 @@
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-title">
+          id="smokers-catalog-title">
         <tspan x="0" y="16" id="tspan2162">smokers/catalog.ttl</tspan></text>
       <text
           font-size="13px"
           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-text"
+          id="smokers-catalog-text"
           transform="translate(5,24)">
         <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Catalog</tspan>
         <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
@@ -241,12 +243,12 @@
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-title">
-        <tspan x="0" y="16" id="tspan2162">smokers/dataset.ttl</tspan></text>
+          id="smokers-dataset-title">
+        <tspan x="0" y="16">smokers/dataset.ttl</tspan></text>
       <text
           font-size="13px"
           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-text"
+          id="smokers-dataset-text"
           transform="translate(5,24)">
         <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Dataset</tspan>
         <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
@@ -269,12 +271,12 @@
       <text
           font-size="22.5774px"
           style="font-style:normal;font-weight:normal;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-title">
+          id="smokers-distribution-title">
         <tspan x="0" y="16" id="tspan2162">boston/distribution/sparql.ttl</tspan></text>
       <text
           font-size="13px"
           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-          id="EhrFdp-text"
+          id="smokers-distribution-text"
           transform="translate(5,24)">
         <tspan x="40"    y="20"  xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">dcat:Distribution</tspan>
         <tspan x="138.5" y="20" xml:space="preserve" style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono'">;</tspan>
