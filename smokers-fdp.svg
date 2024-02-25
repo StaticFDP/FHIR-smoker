@@ -182,7 +182,7 @@
         <tspan x="216"   y="62" xml:space="preserve" class="punct">;</tspan>
       </text>
       <path id="EhrFdp-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,-16)"
-            d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
+            d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 108.8163,-10.685134 0,0.01499 3,0.16773 3,0.16773" />
     </g>
 
     <g id="smokers-catalog" transform="translate(350,50)">
@@ -206,7 +206,7 @@
             d="m 170.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 39,0.01499 43,0.16773 43,0.16773" />
 
       <path id="smokers-catalog-registry" class="link reg" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,20)"
-            d="m 220,95 c 100,0 81.5,-284.5 113,-285 l 9,0" /><!-- d="m 220,95 c 43,0 69,-11 116,-11 39,0 43,0 43,0" -->
+            d="m 220,95 c 100,0 81.5,-284.5 113,-285 l 9,0" />
       <path id="contains-registry" class="link reg" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="cssc" transform="translate(0,4)"
             d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51 0,0 2,-331 15.5,-332 l 18,0" />
     </g>
@@ -225,7 +225,7 @@
         <tspan x="204"   y="82" xml:space="preserve" class="punct">;</tspan>
       </text>
       <path id="smokers-dataset-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,4)"
-          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
+          d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 108.8163,-10.685134 0,0.01499 3,0.16773 3,0.16773" />
     </g>
 
     <g id="smokers-distribution" transform="translate(1050,150)">
