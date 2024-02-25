@@ -52,7 +52,7 @@
     .dc  { fill: #440044 }
 
     /* parent */
-    #main .link { stroke:#00ff00 } /* default color for link arcs */
+    .link { stroke:#00ff00 } /* default color for link arcs */
 
     #ldp-arrows .node { stroke:#0000ff }
     #ldp-arrows .meta { stroke:#770000 }
@@ -60,13 +60,14 @@
 
     #parent text { font-size:13px; }
     #parent .link { fill: #777700; }
-    #parent path { stroke: #777700; }
+    #parent path, #parentAbove path { stroke: #777700; }
 
     .box { fill-opacity:1; stroke-width:2; stroke-opacity:1; fill:#ffffff }
     .box.frame { fill:#ffffff; stroke:#000000 }
     .box.dcat  { fill:#ffeedd; stroke:#ffddcc }
     .box.ldp   { fill:#ddeeff; 1;stroke:#ccddee }
 
+    .reg { display:none; }
   </style>
   <defs id="sprites" style="display:none" inkscape:groupmode="layer" inkscape:label="sprites" >
     <g id="template">
@@ -196,9 +197,18 @@
         <tspan x="15"    y="82" xml:space="preserve" class="dcat predicate">dcat:dataset</tspan>
         <tspan x="120.5" y="82" xml:space="preserve" class="node">&lt;...&gt;</tspan>
         <tspan x="164"   y="82" xml:space="preserve" class="punct">;</tspan>
+
+        <tspan x="15"    y="94" xml:space="preserve" class="dcat predicate reg">fdp:patientRegistry</tspan>
+        <tspan x="172.5" y="94" xml:space="preserve" class="node reg">&lt;...&gt;</tspan>
+        <tspan x="216"   y="94" xml:space="preserve" class="punct reg">;</tspan>
       </text>
       <path id="smokers-catalog-nested" class="link" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,4)"
-            d="m 219.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 3.17459,0.01499 3.85076,0.16773 3.85076,0.16773" />
+            d="m 170.50717,99.264403 c 42.96102,0.383707 68.71563,-10.907514 115.8163,-10.685134 39,0.01499 43,0.16773 43,0.16773" />
+
+      <path id="smokers-catalog-registry" class="link reg" style="fill:none" sodipodi:nodetypes="csc" transform="translate(0,20)"
+            d="m 220,95 c 100,0 81.5,-284.5 113,-285 l 9,0" /><!-- d="m 220,95 c 43,0 69,-11 116,-11 39,0 43,0 43,0" -->
+      <path id="contains-registry" class="link reg" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="cssc" transform="translate(0,4)"
+            d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51 0,0 2,-331 15.5,-332 l 18,0" />
     </g>
 
     <g id="smokers-dataset" transform="translate(700,100)">
@@ -226,6 +236,25 @@
         <tspan x="40"    y="20"  xml:space="preserve" class="dcat predicate">dcat:Distribution</tspan>
         <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
       </text>
+    </g>
+
+    <g id="smokers-registry" class="reg" transform="translate(700,-160)">
+      <use xlink:href="#template" x="0" y="20" width="100%" height="100%" />
+      <text id="smokers-registry-title" class="filename"><tspan x="0" y="16">smokers/patientRegistry.ttl</tspan></text>
+      <text id="smokers-registry-text" transform="translate(5,24)">
+        <tspan x="40"    y="20"  xml:space="preserve" class="dcat class">dcat:Registry</tspan>
+        <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
+
+      </text>
+
+      <g id="parentAbove" transform="translate(0,20)">
+        <text id="template-text" transform="translate(5,27)">
+          <tspan x="16"    y="30" xml:space="preserve" class="dcat predicate">dcat:isPartOf</tspan>
+          <tspan x="126"   y="30" xml:space="preserve" class="link">&lt;...&gt;</tspan>
+          <tspan x="168"   y="30" xml:space="preserve" class="punct">;</tspan>
+        </text>
+        <path id="isPartOf99" transform="translate(-350,-70)" style="fill:none;marker-end:url(#Arrow1Mstart)" d="M 523,123 C 668,103 750,300 528,300 354,300 311.01154,300 316,300 v 0" sodipodi:nodetypes="cscc" />
+      </g>
     </g>
   </g>
   <g
