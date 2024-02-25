@@ -109,13 +109,16 @@
         <tspan x="163"   y="172" xml:space="preserve" class="punct">.</tspan>
       </text>
       <g id="ldp-arrows" transform="translate(0,-16)">
-        <path id="membershipResource" class="node" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csscc"
+        <path id="membershipResource" class="meta" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csscc"
               d="M 222.30092,172.54584 C 342.86337,172.36986 346.0454,126.80567 81.225784,115.4008 52.399298,114.23251 60.463508,115.11486 35.459074,114.52655 12.311022,113.98192 12.986758,87.969042 12.986758,87.969042 l -0.02636,-42.291718" />
+        <path id="membershipResource2" class="meta" style="display:none;fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csc"
+              d="M 214.36361,170.62189 C 214.27973,143.42375 156.95099,135.22404 99.915978,122.0629 22.826337,104.27405 7.9439693,133.26796 15.515632,46.591811" />
         <path id="hasMemberRelation" class="meta" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csc"
               d="m 236.44819,190.73993 c 80.35294,-2.00308 104.48457,-53.81832 0.11505,-71.07872 -96.5507,-12.44036 -118.31146,-2.80057 -131.08996,-9.75754 -5.816724,-3.16679 -10.961337,-6.11145 -10.961337,-6.11145" />
+        <path id="hasMemberRelation2" class="meta" style="display:none;fill:none;stroke:#000000;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="csc"
+              d="M 211.85353,189.15138 C 242.67426,167.98809 212.6149,143.1435 164.88034,131.78866 87.912497,113.47999 99.625312,118.54895 80.016079,108.30701" />
         <path id="contains" class="link" style="fill:none;marker-end:url(#Arrow1Mend)" sodipodi:nodetypes="cssc"
-            d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789"
-            />
+              d="m 167.24554,209.66623 c 74.41367,0.90408 145.42651,-18.34383 146.58194,-51.30388 1.16009,-33.09279 -1.97376,-69.735344 21.49599,-69.783083 0,0 -7.15026,0.0822 8.79657,-0.01789" />
       </g>
     </g>
 
@@ -224,5 +227,11 @@
         <tspan x="138.5" y="20" xml:space="preserve" class="punct">;</tspan>
       </text>
     </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="scratch"
+     style="display:inline">
   </g>
 </svg>
